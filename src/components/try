@@ -1,0 +1,67 @@
+        {
+            {dataSearch.length > 0 ? dataSearch.map((product,i) => {
+            return(
+
+            
+
+                        <li key = {i}>
+                            <div className='product'>
+                                <a href = {product.landingPageUrl}>
+                                    <img src={product.images[0].src} alt = "" className='imgL'/>
+                                    
+                                </a>
+                                <span>
+                                    {product.brand}
+                                </span>
+                                <p>
+                                    {product.productName}
+                                </p>
+                                <div className='product-price'>
+                                    <div>
+                                        Rs.{product.mrp + ' ' + product.discountDisplayLabel}
+                                    </div>
+                                    <button className='buttonCart'>
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+            )
+        }
+        ): 
+        
+            products.map((product,i) => {
+                    return(
+                        <li key = {i}>
+                            <div className='product'>
+                                <a href = {product.landingPageUrl}>
+                                    <img src={product.images[0].src} alt = "" className='imgL'/>
+                                    
+                                </a>
+                                <span>
+                                    {product.brand}
+                                </span>
+                                <p>
+                                    {product.productName}
+                                </p>
+                                <div className='product-price'>
+                                    <div>
+                                        Rs.{product.mrp + ' ' + product.discountDisplayLabel}
+                                    </div>
+                                    <button className='buttonCart'>
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+
+                    )
+                        
+                    })
+
+                }
+            
+            
+                   
+        
+        }
