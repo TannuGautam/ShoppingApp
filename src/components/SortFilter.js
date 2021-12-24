@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const SortFilter = ({dataSort,dataFilColor,dataFilBrand,dataFilDiscount}) => {
+const SortFilter = ({dataSort,dataFilColor,dataFilBrand,dataFilDiscount,dataSortR}) => {
     const [selectVS, setSelectV] = useState("");
     const [selectVFC, setSelectVFC] = useState("");
     const [selectVFD, setSelectVFD] = useState("");

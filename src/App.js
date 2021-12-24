@@ -37,6 +37,8 @@ const sortRes = products.sort((a,b) => {
   
 }
 
+
+
 // console.log(sortC);
 
 //filter based on color
@@ -80,14 +82,6 @@ let dataSearch = products.filter(item => {
     return Object.keys(item).some(key => 
       item[key].toString().toLowerCase().includes(filtered.toString().toLowerCase()))
 })
-
-// const imgClick = (e) => {
-  
-//   <Link>
-                                    
-// <DetailsPage products = {products}></DetailsPage>: "no valur"
-//   </Link>
-// }
 
 
   return (

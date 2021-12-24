@@ -4,7 +4,7 @@ import menuicon from '../images/menu-icon.png'
 
 const NavBar = ({setFilter, dataSearch}) => {
     const [searchText, setSearchText] = useState('');
-    const [clickM, setclickM] = useState("");
+    const [clickM, setclickM] = useState(false);
     
 
     const searchTextHandle = (e) => {
@@ -24,21 +24,11 @@ const NavBar = ({setFilter, dataSearch}) => {
         
     }
 
-    // const menuClick = () => {
-    //     if(clickM === "")
-    //     {
-    //         setclickM("active")
-    //     }
-    //     else{
-    //         setclickM("")
-    //     }
-    // }
-
     return (
         
         <div className='header1'>
             <div className='logo'>Myntra Dummy</div>
-            <div className='navSection'>
+            <div className='navSection' id = {clickM ? "hidden" : ""}>
                 <div className='header-mwk'>MEN</div>
                 <div className='header-mwk'>WOMEN</div>
                 <div className='header-mwk'>KIDS</div>
@@ -49,7 +39,7 @@ const NavBar = ({setFilter, dataSearch}) => {
                 <input type = 'search' value = {searchText} onChange = { searchTextHandle } placeholder = "Search" className = "search-field"></input>
                 <button type="submit"  onClick = {searchSubmitHandler} className="search-button">Search</button>
             </div>
-            {/* {clickM ? null : <img src = {menuicon} className= {clickM} onClick={menuClick}></img>} */}
+            <img src = {menuicon} onClick={() => {setclickM(!clickM)}}></img>
 
         </div>
     )
